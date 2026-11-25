@@ -2,6 +2,8 @@
 
 **An agent that lives three futures and keeps the best one.**
 
+Live page with the demo: **https://do-over-hacksgiving.fly.dev**
+
 Do-Over runs on a Fly.io Sprite. To do a risky job, it checkpoints its own Sprite, tries one approach, writes down how it went, rolls the whole machine back, and tries the next one. When every future is done, it restores the winner and opens a pull request.
 
 Rolling back wipes the disk and restarts the Sprite, so the agent forgets each future as soon as it leaves it. The only memory that survives is a GitHub issue it writes to through a Sprites connector: **notes from futures that never happened.**
